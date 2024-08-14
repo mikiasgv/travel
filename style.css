@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  opacity: 0;
+}
+
+.container__image {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(0, 0px);
+  z-index: 1;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(255, 255, 255, 0.15)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-left: 4vw;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+
+.header__menu {
+  display: flex;
+  height: 16vh;
+  padding-top: 4vh;
+}
+
+.logo {
+  width: 50vw;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.menu ul {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu ul li {
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr 1fr;
+  height: 76vh;
+}
+
+/* Hero elements style */
+/* Vertical Indicator */
+.virtical-indicator::before {
+  content: "";
+  height: 60vh;
+  width: 1px;
+  background-color: rgb(255 255 255 / 57%);
+  position: absolute;
+  left: 10px;
+  top: 1px;
+}
+
+.virtical-indicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+}
+
+.virtical-indicator__sp {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255 255 255 / 90%);
+  border-radius: 100%;
+  color: rgb(255 255 255 / 20%);
+  font-size: 11px;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(10 65 171);
+}
+/* span.active-indicator {
+  transform: scale(1.8);
+  color: rgb(10 65 171);
+} */
+
+.vertical-text__indicator {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+}
+.vertical-text__indicator--top {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  position: relative;
+}
+
+/* End Vertical Indicator */
+/* Title */
+.title {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 5vw;
+}
+.title__outer {
+  position: relative;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.title__inner {
+  height: 20vh;
+  position: absolute;
+}
+
+.title__main-header {
+  font-size: 4.8vw;
+  font-weight: 600;
+  line-height: 1;
+  width: max-content;
+}
+
+.title__main-description {
+  font-size: 14px;
+}
+
+.title__main-action {
+  margin-top: 32px;
+}
+
+button.btn {
+  color: #fff;
+  background-color: #27609f;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn svg {
+  margin-left: 24px;
+  font-weight: bold;
+}
+
+/* End title */
+/* Slider */
+.slide {
+  width: 50vw;
+  display: grid;
+  grid-template-rows: 1fr 3rem;
+  /* overflow: hidden; */
+}
+
+.slide__title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.slide__rate {
+  display: flex;
+  align-content: space-between;
+}
+
+.slide__rate span {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 100%;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.slide__outer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 16vw;
+  position: absolute;
+}
+.slide-container img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px -3px rgba(0, 0, 0, 0.81);
+}
+
+.active-slide {
+  /* transform: scale(1.1) translateX(-1vw); */
+  border: none;
+}
+
+.book-mark {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255 255 255 / 90%);
+  border-radius: 100%;
+  position: absolute;
+  top: 46px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.slide__indicator {
+  display: flex;
+  height: 5rem;
+}
+
+/* End od slider */
+/* Slide indicator */
+.slide__indicator span {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: rgb(167 166 166 / 84%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+span.prev {
+  margin-right: 24px;
+}
+
+span.prev svg {
+  transform: rotate(180deg);
+}
