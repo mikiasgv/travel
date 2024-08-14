@@ -13,19 +13,19 @@ const slideSize = slides.length;
 //order of the array matters here
 const bgImages = [
   {
-    imageSrc: "/images/Addis-ababa.jpg",
+    imageSrc: "./images/Addis-ababa.jpg",
     alt: "Addis Ababa",
   },
   {
-    imageSrc: "/images/Afar.jpg",
+    imageSrc: "./images/Afar.jpg",
     alt: "Afar",
   },
   {
-    imageSrc: "/images/Simien-Mountains.jpg",
+    imageSrc: "./images/Simien-Mountains.jpg",
     alt: "Simien-Mountains",
   },
   {
-    imageSrc: "/images/Debre-libanos.jpg",
+    imageSrc: "./images/Debre-libanos.jpg",
     alt: "Debre-libanos",
   },
 ];
